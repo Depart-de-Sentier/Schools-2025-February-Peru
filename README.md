@@ -1,5 +1,5 @@
 # Escuela de Verano introducción a Brightway, Perú 2025
-PELCAN PUCP y Départ de Sentier ofrecen el presente curso de verano del 3 al 7 de febrero de 2025 en Open PUCP.
+[PELCAN PUCP](https://red.pucp.edu.pe/ciclodevida/) y [Départ de Sentier](https://d-d-s.ch) ofrecen el presente curso de verano del 3 al 7 de febrero de 2025 en Open PUCP.
 
 ## Descripción
 
