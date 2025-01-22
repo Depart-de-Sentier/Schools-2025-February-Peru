@@ -1,0 +1,558 @@
+<h1 id="escuela-de-verano-introducción-a-brightway-perú-2025">Escuela de Verano introducción a Brightway, Perú 2025</h1>
+<p><a href="https://red.pucp.edu.pe/ciclodevida/">PELCAN PUCP</a> y <a href="https://d-d-s.ch">Départ de Sentier</a> ofrecen el presente curso de verano del 3 al 7 de febrero de 2025 en Open PUCP.</p>
+<figure>
+<img src="./media/banner.png" alt="banner" /><figcaption>banner</figcaption>
+</figure>
+<h2 id="descripción">Descripción</h2>
+<p>El Análisis de Ciclo de Vida es una metodología holística que se ha convertido en la herramienta de facto para el estudio de sostenibilidad en productos y servicios. Debido a esto el avance de esta metodología ha permitido que ahora sea considerada como parte fundamental del diseño de políticas públicas alrededor del mundo. Los estudios de ACV pueden escalar en complejidad, sobre todo por la necesidad de sistematizar la construcción de Inventarios de Ciclo de Vida (LCI), o de integrar el ACV con otras metodologías científicas. Afortunadamente, en los últimos años, el desarrollo de herramientas computacionales de código abierto ha permitido la aparición de un ecosistema de librerías que buscan expandir los límites del ACV convencional. Este es el caso de Brightway: una de las librerías de código abierto en lenguaje Python más utilizadas para realizar cálculos de ACV de manera programática.</p>
+<p>El objetivo de este curso es brindar una introducción a Brightway y al ecosistema de librerías desarrolladas en base a esta. El curso proporcionará los conocimientos fundamentales que los participantes necesitan para realizar cálculos esenciales en el ACV (evaluación de impactos, incertidumbre, parametrización, etc.), pero también se expondrá cómo estos suelen ser integrados en casos de estudio más avanzados (optimización matemática, aprendizaje automatizado, etc.).</p>
+<p>El curso está enfocado en estudiantes, académicos o profesionales con conocimientos avanzados de ACV, pero con interés en comenzar a realizar cálculos de ACV de manera programática.</p>
+<h2 id="indicaciones">Indicaciones</h2>
+<p>Antes de iniciar el curso, toma en cuenta estas indicaciones:</p>
+<ul>
+<li>Para poder conocernos mejor, es necesario que todos preparemos una (1) diapositiva de presentación. Pueden utilizar fotos, videos, texto o lo que la creatividad les sugiera :sparkles: . Por favor, envíen la diapositiva a cualquiera de estos correos: gustavo.larrea@list.lu, tomas.navarrete@list.lu, alvaro.hahn-menacho@psi.ch, a más tardar el domingo por la noche.</li>
+<li>curso requiere que cierto software sea instalado, por favor revisen las siguientes consideraciones para saber cómo (<a href="instrucciones.md">CONSIDERACIONES</a>).</li>
+<li>Si tienen alguna duda respecto a la instalación de los software o referida al curso, no duden en contactarnos por correo.</li>
+</ul>
+<h2 id="programa-de-trabajo-general">Programa de Trabajo General</h2>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Día</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Antes del curso</td>
+<td>+ Tipos de datos, objetos, métodos y clases en Python<br>&gt; Las instrucciones de cómo instalar Python, Jupyter y Brightway serán enviadas antes del curso.</td>
+</tr>
+<tr class="even">
+<td><a href="material/febrero-3.md">Febrero 3</a></td>
+<td>+ <strong>Fundamentos de Python y Brightway:</strong><br>Creación de inventarios desde cero.<br>Importar bases de datos comerciales<br>Cálculos de impactos ambientales<br>Exportar proyectos, bases de datos y resultados<br>&gt; <strong>Creación de equipos y selección de tema para el ejercicio práctico</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="material/febrero-4.md">Febrero 4</a></td>
+<td>+ <strong>Manipulación de inventarios:</strong><br>Parametrización de inventarios<br>Construcción de escenarios<br>&gt; <strong>Incertidumbre y análisis de sensitividad:</strong><br>Simulación de Monte Carlo<br>Análisis de sensitividad global</td>
+</tr>
+<tr class="even">
+<td><a href="material/febrero-5.md">Febrero 5</a></td>
+<td>+ <strong>El ecosistema de Brightway e integración con otras flujos metodológicos:</strong><br>Premise para modelos prospectivos<br>LCA y modelos de optimización<br>&gt; <strong>Sesión de preguntas</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="material/febrero-6.md">Febrero 6</a></td>
+<td>+ Trabajo grupal</td>
+</tr>
+<tr class="even">
+<td><a href="material/febrero-7.md">Febrero 7</a></td>
+<td>+ <strong>Cierre:</strong><br>Trabajo grupal<br>Presentación de resultados<br>&gt; Cena de despedida</td>
+</tr>
+</tbody>
+</table>
+<h3 id="programa-de-trabajo-detallado">Programa de Trabajo detallado</h3>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 20%" />
+<col style="width: 22%" />
+<col style="width: 23%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hora</th>
+<th><a href="material/febrero-3.md">Lunes</a></th>
+<th><a href="material/febrero-4.md">Martes</a></th>
+<th><a href="material/febrero-5.md">Miércoles</a></th>
+<th><a href="material/febrero-6.md">Jueves</a></th>
+<th><a href="material/febrero-7.md">Viernes</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>09:00 - 09:30</td>
+<td>* Bienvenida (15 min)</td>
+<td>* Sesión de preguntas y respuestas: Día 1</td>
+<td>* Sesión de preguntas y respuestas: Día 1 y 2</td>
+<td>Trabajo en grupo</td>
+<td>Trabajo en grupo</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>* Ronda de presentaciones 1 (15min)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>09:30 - 10:00</td>
+<td>* Introducción al universo Brightway.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Instructor: Tomás</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>i) Qué es BW, AB.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>ii) Qué se necesita para utilizar BW.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>iii) Cómo utilizar BW.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10:00 - 10:30</td>
+<td>* Estructuras de datos básicas Python + BW:</td>
+<td>* Activity Browser.</td>
+<td>* Ejercicio práctico en AB.</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Instructor: Tomás</td>
+<td>Instructor: Tomás</td>
+<td>Instructor: Tomás</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>+ listas, tuplas, diccionarios</td>
+<td>i) Introducción a Activity-Browser</td>
+<td>i) Generar y utilizar una superestructura</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>ii) Inventarios parametrizados</td>
+<td>ii) Utilizar parámetros y escenarios</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>iii) Análisis Monte Carlo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>iv) Análisis de escenarios</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>v) Trabajar en AB y Jupyter</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>10:30 - 11:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>11:00 - 11:30</td>
+<td>* Ronda de presentaciones 2 (15min)</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>* Descanso/Café</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>11:30 - 12:00</td>
+<td>* Conceptos básicos de Brightway (parte I y II).</td>
+<td>* Ejercicio práctico en AB.</td>
+<td>Creación de data packages</td>
+<td>Trabajo en grupo</td>
+<td>Trabajo en grupo</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Instructor: Gustavo</td>
+<td>Instructor: Álvaro</td>
+<td>Instructor: Tomás</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Introducción a la estructura computacional</td>
+<td>i) Inventarios parametrizados</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>del ACV</td>
+<td>ii) Monte Carlo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Introducción a BW</td>
+<td>iii) Análisis de sensibilidad global</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- Manipular actividades</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Calcular ACVs</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- Exportar y compartir bases de datos</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>y proyectos</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- Importar bases de datos comerciales</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Importar inventarios propios</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>12:00 - 12:30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12:30 - 13:00</td>
+<td></td>
+<td></td>
+<td><a href="debriefing.md">Debriefing</a> (responsables de equipo + instructores)</td>
+<td><a href="debriefing.md">Debriefing</a> (responsables</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>de equipo + instructores)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>13:00 - 13:30</td>
+<td>Almuerzo 🥗</td>
+<td>Almuerzo 🥗</td>
+<td>Almuerzo 🥗</td>
+<td>Almuerzo 🥗</td>
+<td>Almuerzo 🥗</td>
+</tr>
+<tr class="odd">
+<td>13:30 - 14:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14:00 - 14:30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>14:30 - 15:00</td>
+<td>* Conceptos básicos de Brightway (parte III).</td>
+<td>* Creación de equipos y selección de tema</td>
+<td>* Compartir proyectos de BW + Colaboración vía Git (parte I).</td>
+<td>Trabajo en grupo</td>
+<td>Presentación del trabajo en grupo</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Instructor: Gustavo</td>
+<td>para el ejercicio práctico</td>
+<td>Instructor: Tomás</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>i) Matrices</td>
+<td></td>
+<td>i) Documentación</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>ii) Análisis de contribuciones</td>
+<td></td>
+<td>ii) Introducción a Git</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>iii) Visualizar los resultados</td>
+<td></td>
+<td>iii) Módulos y paquetes</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>iv) Monte Carlo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>v) Creación de métodos de impacto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15:00 - 15:30</td>
+<td></td>
+<td>* Premise.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Instructor: Álvaro</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>i) Introducción a las bases de datos prospectivas</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>ii) Generación de bases de datos prospectivas</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>iii) Generación de escenarios personalizados</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15:30 - 16:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16:00 - 16:30</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Observaciones finales y feedback</td>
+</tr>
+<tr class="odd">
+<td>16:30 - 17:00</td>
+<td>Ejercicio completo: del inventario a Monte Carlo</td>
+<td>* Premise.</td>
+<td>* Estado del arte:</td>
+<td>Trabajo en grupo</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Instructor: Gustavo</td>
+<td>Instructor: Álvaro</td>
+<td>- Álvaro: Pathways</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>- Álvaro: Temporalis y Timex</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>- Gustavo: Optimización y Pulpo</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17:00 - 17:30</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Último café juntos y despedida</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>17:30 - 18:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18:00 - 18:30</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café</td>
+<td>Descanso/Café + <a href="debriefing.md">Debriefing</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18:30 - 19:00</td>
+<td><a href="groupmaking.md">Speed dating para creación de grupos</a></td>
+<td>* Premise ejercicio</td>
+<td>Preguntas y Respuestas</td>
+<td>Trabajo en grupo</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Instructor: Álvaro</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>19:00 - 19:30</td>
+<td></td>
+<td>Inicio de trabajo en grupo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>(los grupos se organizan y discuten tema)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>19:30 - 20:00</td>
+<td></td>
+<td>Pitch de trabajos de grupo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>

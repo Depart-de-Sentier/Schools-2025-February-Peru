@@ -1,7 +1,7 @@
 # CONSIDERACIONES PARA ANTES DEL CURSO
 
 Por favor revisa las siguientes consideraciones antes de tu llegada al curso. 
-Si encuentras algún problema, no dude en contactarnos que nosotros intentaremos 
+Si encuentras algún problema, no dudes en contactarnos que nosotros intentaremos 
 resolverlo para que todo esté listo en tu computadora.
 
 ## TRABAJO EN SERVIDORES REMOTOS + COMPUTADORAS PERSONALES
@@ -87,6 +87,7 @@ A excepción de las sesiones con activity-browser, la mayor parte del curso requ
 En este sentido, en teoría, solo necesitamos un editor de texto para modificar los archivos que contienen el código, y un terminal para ejecutarlos.
 En la práctica, esto puede ser un poco intimidante para aquellos que comienzan en el mundo de la programación o de brigthway.
 Por esta razón, el curso utilizará *jupyter notebook* como tecnología fundamental para escribir el código y ejecutarlo al mismo tiempo. 
+
 No debes preocuparte por instalar esta tecnología, ya que la instalación de anaconda ya la incluye.
 Si deseas saber más acerca de jupyter notebook, consulta aquí: https://ebac.mx/blog/jupyter-notebook 
 

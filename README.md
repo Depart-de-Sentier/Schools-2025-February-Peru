@@ -1,6 +1,8 @@
 # Escuela de Verano introducción a Brightway, Perú 2025
 [PELCAN PUCP](https://red.pucp.edu.pe/ciclodevida/) y [Départ de Sentier](https://d-d-s.ch) ofrecen el presente curso de verano del 3 al 7 de febrero de 2025 en Open PUCP.
 
+![banner](./media/banner.png)
+
 ## Descripción
 
 El Análisis de Ciclo de Vida es una metodología holística que se ha convertido en la herramienta de facto para el estudio de sostenibilidad en productos y servicios. Debido a esto el avance de esta metodología ha permitido que ahora sea considerada como parte fundamental del diseño de políticas públicas alrededor del mundo. Los estudios de ACV pueden escalar en complejidad, sobre todo por la necesidad de sistematizar la construcción de Inventarios de Ciclo de Vida (LCI), o de integrar el ACV con otras metodologías científicas. Afortunadamente, en los últimos años, el desarrollo de herramientas computacionales de código abierto ha permitido la aparición de un ecosistema de librerías que buscan expandir los límites del ACV convencional. Este es el caso de Brightway: una de las librerías de código abierto en lenguaje Python más utilizadas para realizar cálculos de ACV de manera programática. 
@@ -11,10 +13,12 @@ El curso está enfocado en estudiantes, académicos o profesionales con conocimi
 
 ## Indicaciones 
 
-Antes de iniciar el curso, debes revisar estas [INDICACIONES](instrucciones.md). 
+Antes de iniciar el curso, toma en cuenta estas indicaciones:
 
-## Programa de Trabajo
-=======
+* Para poder conocernos mejor, es necesario que todos preparemos una (1) diapositiva de presentación. Pueden utilizar fotos, videos, texto o lo que la creatividad les sugiera :sparkles: . Por favor, envíen la diapositiva a cualquiera de estos correos: gustavo.larrea@list.lu, tomas.navarrete@list.lu, alvaro.hahn-menacho@psi.ch, a más tardar el domingo por la noche.
+* curso requiere que cierto software sea instalado, por favor revisen las siguientes consideraciones para saber cómo ([CONSIDERACIONES](instrucciones.md)). 
+* Si tienen alguna duda respecto a la instalación de los software o referida al curso, no duden en contactarnos por correo.
+
 ## Programa de Trabajo General
 
 
@@ -27,11 +31,8 @@ Antes de iniciar el curso, debes revisar estas [INDICACIONES](instrucciones.md).
 | [Febrero 6](material/febrero-6.md) | + Trabajo grupal                                                                                                                                                                |
 | [Febrero 7](material/febrero-7.md) | + **Cierre:**<br>Trabajo grupal<br>Presentación de resultados<br>> Cena de despedida                                                                                            |
 
-
-
-
-=======
 ### Programa de Trabajo detallado
+
 
 | Hora              | [Lunes](material/febrero-3.md)                    | [Martes](material/febrero-4.md)                         | [Miércoles](material/febrero-5.md)                       | [Jueves](material/febrero-6.md) | [Viernes](material/febrero-7.md) |
 |-------------------|---------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|----------------------------------|----------------------------------|
