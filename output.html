@@ -1,0 +1,92 @@
+<h1 id="consideraciones-para-antes-del-curso">CONSIDERACIONES PARA ANTES DEL CURSO</h1>
+<p>Por favor revisa las siguientes consideraciones antes de tu llegada al curso. Si encuentras algun problema, no dude en contactarnos que nosotros intentaremos<br />
+resolverlo para que todo este listo en tu computadora.</p>
+<h2 id="trabajo-en-servidores-remotos-computadoras-personales">TRABAJO EN SERVIDORES REMOTOS + COMPUTADORAS PERSONALES</h2>
+<p>En la primera etapa del curso utilizaremos servidores remotos para ejecutar los   ejercicios. Esto nos permitira que todos utilicemos el mismo entorno de computacion bajo el   control completo de los intructores. Esto ayudara a que solo nos concentremos en aprender los conceptos basicos sin   preocuparnos en las configuraciones y particularidades de cada computadora.</p>
+<p>Una vez interiorizados los conceptos fundamentales, la segunda parte del curso se   realizara en las computadoras personales de cada alumno. Esto permitira que cada uno utilice su propia computadora y se familiarice con la   manera de utilizar brightway dentro y fuera de las aulas.</p>
+<blockquote>
+<p><strong><em>NOTA:</em></strong> Recomendamos contar con al menos 8GB de RAM en la computadora personal.<br />
+Algunos calculos pueden ser muy intensivos en cuestion de uso de memoria.</p>
+</blockquote>
+<h2 id="anaconda-y-git">ANACONDA y GIT</h2>
+<p>Los participantes deberan descargar e instalar una distribucion de anaconda para   gestionar los entornos de python. De igual forma, cada computadora debe tener GIT instalado, que sera el Sistema de   Control de Versiones (VCS en ingles) que utilizaremos.</p>
+<ol type="1">
+<li>Instalar GIT</li>
+</ol>
+<ul>
+<li>Descargar el instalador de GIT adecuado para tu sistema operativo (https://git-scm.com/downloads) Instalar GIT</li>
+<li>Clonar el repositorio del curso ejecutando este codigo en un terminal (en Windows puede abrir Git BASH):</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">git</span> clone https://github.com/Depart-de-Sentier/Schools-2025-February-Peru</a></code></pre></div>
+<ol type="1">
+<li>Instalar anaconda
+<ul>
+<li>Descarga el instalador adecuado para tu Sistema Operativo (https://www.anaconda.com/download/success)</li>
+<li>Instala anaconda</li>
+</ul></li>
+<li>Utiliza anaconda para crear dos entornos de python.
+<ul>
+<li>Ejecute los siguientes comandos en terminal (e.g., llamado <code>Anaconda prompt</code> en windows):</li>
+</ul>
+<pre class="console"><code> conda env create -f environment_ab.yaml
+ conda activate &lt;nombre premise&gt;
+ python prueba_ab.py</code></pre></li>
+</ol>
+<ul>
+<li>Anaconda: https://www.anaconda.com/products/distribution</li>
+<li>Git: https://git-scm.com/downloads</li>
+</ul>
+<h2 id="change-the-anaconda-solver">Change the Anaconda solver</h2>
+<p>Once you have installed Anacoda on your computer, you may consider installing the <code>libmamba</code> solver in conda, for faster environment resolution. Open the terminal (Anaconda terminal in Windows, or Terminal on Mac) and run the following commands:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">  <span class="ex">conda</span> install -n base conda-libmamba-solver</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="ex">conda</span> config --set solver libmamba</a></code></pre></div>
+<h2 id="clone-this-repository">Clone this repository</h2>
+<p>Option A: Download github desktop, click to clone a repository, and paste the link of the repository shown further below.</p>
+<p>Option B: Using your Windows/Mac terminal, navigate to the folder where you want to store the course material.For example, you can create a folder called <code>autumn-school-2024</code> in your <code>Documents</code> folder. To navigate to the <code>Documents</code> folder, you can run the following command:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1">  <span class="bu">cd</span> Documents</a></code></pre></div>
+<p>To go back to the previous folder, you can run the following command:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">  <span class="bu">cd</span> ..</a></code></pre></div>
+<p>If you want to create a new folder, you can run the following command:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">  <span class="fu">mkdir</span> autumn-school-2024</a></code></pre></div>
+<p>Once you are in the folder of your choice, you can <strong>clone</strong> this Github repository using Git onto your computer by running the following command in your terminal:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1">  <span class="fu">git</span> clone https://github.com/romainsacchi/autumn-school-dds-psi-2024.git</a></code></pre></div>
+<p>You can now navigate to the <code>autumn-school-dds-psi-2024</code> folder and access its content on your computer.</p>
+<h2 id="environments-setup">Environments setup</h2>
+<p>When you will do exercises on your computer, you will use a number of libraries that are not installed by default in Anaconda. To make sure you have all the necessary libraries, we will create Anaconda <strong>environments</strong> for you, using <strong>recipes</strong> that we have prepared.</p>
+<p>We have prepared four recipes which install four different environments: - <code>bw25_env_xxx.yaml</code>: it will install the <code>brightway</code> library as well as <code>temporalis</code> - <code>wurst_env_xxx.yaml</code>: it will install the <code>wurst</code> library and its dependencies - <code>premise_env.yaml</code>: it will install the <code>premise</code> library and its dependencies as well as <code>activity-browser</code> - <code>odym_env.yaml</code>: it will install the <code>odym</code> library and its dependencies</p>
+<p>After running the recipe files, you will have four environments on your computer: - <code>wurst</code> - <code>premise</code> - <code>bw25</code> - <code>odym</code></p>
+<p>Here is how to install these environments:</p>
+<p>Using your terminal, navigate to the <code>environments</code> folder of the repository:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1">  <span class="bu">cd</span> autumn-school-dds-psi-2024/envs</a></code></pre></div>
+<p>Then, run the following command to create the <code>wurst</code> environment:</p>
+<p>If you use Windows or Mac with an Intel processor:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1">  <span class="ex">conda</span> env create -f wurst_env_win64.yaml</a></code></pre></div>
+<p>If you use Mac with an M1/2/3/4 processor:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1">  <span class="ex">conda</span> env create -f wurst_env_osxARM.yaml</a></code></pre></div>
+<p>This will create a conda environment called <code>wurst</code> with all the required dependencies.</p>
+<p>Then, run the following command to create the <code>premise</code> environment:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1">  <span class="ex">conda</span> env create -f premise_env.yaml</a></code></pre></div>
+<p>This will create a conda environment called <code>premise</code> with all the required dependencies.</p>
+<p>Then, run the following command to create the <code>odym</code> environment:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1">  <span class="ex">conda</span> env create -f odym_env.yaml</a></code></pre></div>
+<p>This will create a conda environment called <code>odym</code> with all the required dependencies.</p>
+<p>Finally, run the following command to create the <code>bw25</code> environment:</p>
+<p>On Windows or Mac with an Intel processor:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1">  <span class="ex">conda</span> env create -f bw25_env_win64.yaml</a></code></pre></div>
+<p>On a Mac with an M1/2/3/4 processor:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1">  <span class="ex">conda</span> env create -f bw25_env_osxARM.yaml</a></code></pre></div>
+<p>This will create a conda environment called <code>bw25</code> with all the required dependencies.</p>
+<p>You can check that the environments have been created by running the following command:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1">  <span class="ex">conda</span> env list</a></code></pre></div>
+<p>You should see the four environments listed in the terminal (plus the <code>base</code> environment).</p>
+<p>You can activate an environment by running the following command:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1">  <span class="ex">conda</span> activate wurst</a></code></pre></div>
+<p>and check the installed packages by running:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1">  <span class="ex">conda</span> list</a></code></pre></div>
+<h2 id="installing-activity-browser">Installing Activity Browser</h2>
+<p>The installation of AB is basically also simply the creation of an environment which is called “ab”, and which contains the activity browser package (and all related packages required to run AB). Please follow the installation instructions given here: https://github.com/LCA-ActivityBrowser/activity-browser</p>
+<h2 id="ecoinvent-database">Ecoinvent database</h2>
+<p>Also, please acquire credentials (username and password) to download the <a href="https://ecoinvent.org">ecoinvent</a> database. Ask the person in charge of your group/university to get these credentials. Or ask the ecoinvent support if you can’t find out in-house.</p>
+<p>We will be using the ecoinvent 3.10 cut-off database for the course.</p>
+<h1 id="code-editor">Code editor</h1>
+<p>We recommend using <strong>PyCharm</strong> or <strong>Visual Studio Code</strong> as an IDE (Integrated Development Environment) for the course. Both are free (Community edition) and have a lot of features that will help you during the course.</p>
