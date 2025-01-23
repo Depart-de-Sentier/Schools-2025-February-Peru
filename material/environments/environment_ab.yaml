@@ -1,0 +1,15 @@
+# En tu terminal, run: conda env create -f environment_ab.yaml
+
+name: activity-browser
+channels:
+  - romainsacchi
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - premise
+  - jupyterlab
+  - matplotlib
+  - seaborn
+  - constructive_geometries==1.0.0
+  - activity-browser
