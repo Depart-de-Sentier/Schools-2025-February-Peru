@@ -59,7 +59,7 @@ Instalar GIT
 - Este puede crearse ejecutando el siguiente código en una terminal (e.g., utiliza `Anaconda prompt` en windows).
     
     ```console
-    conda env create -f environment_ab.yaml
+    conda env create -f materials/environments/environment_ab.yaml
     conda activate activity-browser 
     ```
 - Activity-browser puede ejecutarse abriendo una terminal y ejecutando este código:
