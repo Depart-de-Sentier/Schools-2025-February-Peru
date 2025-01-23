@@ -13,11 +13,12 @@ El curso está enfocado en estudiantes, académicos o profesionales con conocimi
 
 ## Indicaciones 
 
-Antes de iniciar el curso, toma en cuenta estas indicaciones:
-
-* Para poder conocernos mejor, es necesario que todos preparemos una (1) diapositiva de presentación. Pueden utilizar fotos, videos, texto o lo que la creatividad les sugiera :sparkles: . Por favor, envíen la diapositiva a cualquiera de estos correos: gustavo.larrea@list.lu, tomas.navarrete@list.lu, alvaro.hahn-menacho@psi.ch, a más tardar el domingo por la noche.
-* **El curso requiere que cierto software sea instalado, por favor revisen las siguientes consideraciones para saber cómo ([CONSIDERACIONES](instrucciones.md))**. 
-* Si tienen alguna duda respecto a la instalación de los software o referida al curso, no duden en contactarnos por correo.
+> [!IMPORTANTE]
+> Antes de iniciar el curso, toma en cuenta estas indicaciones:
+> 
+> * Para poder conocernos mejor, es necesario que todos preparemos una (1) diapositiva de presentación. Pueden utilizar fotos, videos, texto o lo que la creatividad les sugiera :sparkles: . Por favor, envíen la diapositiva a cualquiera de estos correos: gustavo.larrea@list.lu, tomas.navarrete@list.lu, alvaro.hahn-menacho@psi.ch, a más tardar el domingo por la noche.
+> * **El curso requiere que cierto software sea instalado, por favor revisen las siguientes consideraciones para saber cómo ([CONSIDERACIONES](instrucciones.md))**. 
+> * Si tienen alguna duda respecto a la instalación de los software o referida al curso, no duden en contactarnos por correo.
 
 ## Programa de Trabajo General
 
