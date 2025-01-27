@@ -47,11 +47,11 @@ Instalar GIT
 - Imaginemos que deseamos crear un entorno de python nuevo llamado `mi-entorno`. Este se puede crear ejecutando los siguientes comandos en una terminal (e.g., utiliza `Anaconda prompt` en windows):
 
     ```console
-    conda create -n mi-entorno python==3.10
+    conda create -n mi-entorno python=3.10
     conda activate mi-entorno 
     ```
 - Ya tienes un entorno de python EXCLUSIVO y AISLADO que ejecutara python en version 3.10.
-- Si deseas aprender mas o por que esto es importante, consulta aquí: https://www.toolify.ai/es/ai-news-es/gua-para-principiantes-de-anaconda-en-linux-y-windows-tutorial-de-entornos-de-trabajo-en-python-977984
+- Si deseas aprender mas o por qué esto es importante, consulta aquí: https://www.toolify.ai/es/ai-news-es/gua-para-principiantes-de-anaconda-en-linux-y-windows-tutorial-de-entornos-de-trabajo-en-python-977984
 
 ## ACERCA DE ACTIVITY-BROWSER Y BRIGHTWAY
 
