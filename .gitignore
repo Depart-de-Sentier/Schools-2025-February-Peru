@@ -2,3 +2,5 @@
 .idea
 *output*
 *.swp
+
+*.ipynb_chekpoints*
