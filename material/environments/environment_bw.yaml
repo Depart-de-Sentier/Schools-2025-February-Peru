@@ -30,6 +30,7 @@ dependencies:
     - bw2io==0.9.dev27
     - typer==0.12.5
     - jsonref
+    - pypardiso
     - rich
     - jupytext
     - jupyterlab
