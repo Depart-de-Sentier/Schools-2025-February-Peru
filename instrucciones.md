@@ -59,7 +59,7 @@ Instalar GIT
 - Este puede crearse ejecutando el siguiente código en una terminal (e.g., utiliza `Anaconda prompt` en windows).
     
     ```console
-    conda env create -f materials/environments/environment_ab.yaml
+    conda env create -f material/environments/environment_ab.yaml
     conda activate activity-browser 
     ```
 - Activity-browser puede ejecutarse abriendo una terminal y ejecutando este código:
@@ -71,7 +71,7 @@ Instalar GIT
 - Para instalar un entorno dedicado exclusivamente a brightway, hay seguir las mismas instrucciones cambiando el archivo `environment_ab.yaml` por `environment_bw.yaml`, asi:
 
     ```console
-    conda env create -f environment_bw.yaml
+    conda env create -f material/environments/environment_bw.yaml
     conda activate bw25 
     ```
 
