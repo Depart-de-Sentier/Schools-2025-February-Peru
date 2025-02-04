@@ -26,8 +26,8 @@ El curso está enfocado en estudiantes, académicos o profesionales con conocimi
 | Día               | Actividades                                                                                                                                                                      |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Antes del curso   | + Tipos de datos, objetos, métodos y clases en Python<br>> Las instrucciones de cómo instalar Python, Jupyter y Brightway serán enviadas antes del curso.                         |
-| [Febrero 3](material/febrero-3.md) | + **Fundamentos de Python y Brightway:**<br>Creación de inventarios desde cero.<br>Importar bases de datos comerciales<br>Cálculos de impactos ambientales<br>Exportar proyectos, bases de datos y resultados<br>> **Creación de equipos y selección de tema para el ejercicio práctico** |
-| [Febrero 4](material/febrero-4.md) | + **Manipulación de inventarios:**<br>Parametrización de inventarios<br>Construcción de escenarios<br>> **Incertidumbre y análisis de sensitividad:**<br>Simulación de Monte Carlo<br>Análisis de sensitividad global |
+| [Febrero 3](material/febrero-3/) | + **Fundamentos de Python y Brightway:**<br>Creación de inventarios desde cero.<br>Importar bases de datos comerciales<br>Cálculos de impactos ambientales<br>Exportar proyectos, bases de datos y resultados<br>> **Creación de equipos y selección de tema para el ejercicio práctico** |
+| [Febrero 4](material/febrero-4/febrero-4.md) | + **Manipulación de inventarios:**<br>Parametrización de inventarios<br>Construcción de escenarios<br>> **Incertidumbre y análisis de sensitividad:**<br>Simulación de Monte Carlo<br>Análisis de sensitividad global |
 | [Febrero 5](material/febrero-5.md) | + **El ecosistema de Brightway e integración con otras flujos metodológicos:**<br>Premise para modelos prospectivos<br>LCA y modelos de optimización<br>> **Sesión de preguntas** |
 | [Febrero 6](material/febrero-6.md) | + Trabajo grupal                                                                                                                                                                |
 | [Febrero 7](material/febrero-7.md) | + **Cierre:**<br>Trabajo grupal<br>Presentación de resultados<br>> Cena de despedida                                                                                            |
@@ -35,7 +35,7 @@ El curso está enfocado en estudiantes, académicos o profesionales con conocimi
 ### Programa de Trabajo detallado
 
 
-| Hora              | [Lunes](material/febrero-3.md)                    | [Martes](material/febrero-4.md)                         | [Miércoles](material/febrero-5.md)                       | [Jueves](material/febrero-6.md) | [Viernes](material/febrero-7.md) |
+| Hora              | [Lunes](material/febrero-3/febrero-3.md)                    | [Martes](material/febrero-4/febrero-4.md)                         | [Miércoles](material/febrero-5.md)                       | [Jueves](material/febrero-6.md) | [Viernes](material/febrero-7.md) |
 |-------------------|---------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|----------------------------------|----------------------------------|
 | 09:00 - 09:30     | * Bienvenida (15 min)                             | * Sesión de preguntas y respuestas: Día 1               | * Sesión de preguntas y respuestas: Día 1 y 2            | Trabajo en grupo                | Trabajo en grupo                |
 |                   | * Ronda de presentaciones 1 (15min)               |                                                          |                                                           |                                  |                                  |
