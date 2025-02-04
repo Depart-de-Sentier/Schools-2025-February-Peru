@@ -10,10 +10,12 @@ dependencies:
   - bw2calc==1.8.2
   - bw2data==3.6.6
   - bw2io==0.8.12
-  - premise-bw2
+  - pip
   - jupyterlab
   - matplotlib
   - seaborn
   - constructive_geometries>=1.0.0
   - activity-browser
   - sqlite>=3.45
+  - pip:
+      - "premise[bw2]"
