@@ -76,7 +76,7 @@ from rich import print # Solo para mejorar la grafica de las impresiones
 import numpy as np
 import scipy as sp
 
-A = np.array([ [1, 0,0 ], [-237,1,0] , [0,-2.5,1]])
+A = np.array([ [1, 0,0 ], [-25,1,0] , [0,-237,1]])
 B = np.array([[0,26.6,0]])
 f = np.array([0,1,0])
 Q = np.array([1])
