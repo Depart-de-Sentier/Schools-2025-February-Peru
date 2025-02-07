@@ -48,9 +48,9 @@
 # La manera mas comun para afrontar este problema de forma matematica es mediante un problema de algebra lineal, y esto esta claramente presentado y discutido en [este libro](https://link.springer.com/book/10.1007/978-94-015-9900-9). En este enfoque, la tecnosfera se representa como una matriz en la que cada columna contiene la 'receta' para producir una unidad de una determinado producto (matriz $A_{productos \times actividades}$). La biosfera se presenta como otra matriz de dimensiones $B_{flujos \times actividades}$, y la demanda (unidad funcional) se presenta como un vector $f_{productos}$. Adicional a esto, una matriz $Q_{impactos \times flujos}$ se introduce para convertir los flujos en impactos a traves de factores de caracterizacion.
 # En esta representacion, los valores positivos indican 'salida', mientras que los valores negativos indican 'consumo'.
 #
-# $$ A = \begin{bmatrix} 1 & 0 & 0  \\\ -237 & 1 & 0 \\\ 0 & -2.5 & 1  \end{bmatrix}$$
+# $$ A = \begin{bmatrix} 1 & 0 & 0  \\\ -25 & 1 & 0 \\\ 0 & -237 & 1  \end{bmatrix}$$
 #
-# $$ B = \begin{bmatrix} 1 & 26.6 & 0  \end{bmatrix}$$
+# $$ B = \begin{bmatrix} 0 & 26.6 & 0  \end{bmatrix}$$
 #
 # $$ y = \begin{bmatrix} 0 \\\ 1 \\\ 0 \end{bmatrix}$$ 
 #
