@@ -3,6 +3,10 @@
 
 ![banner](./media/banner.png)
 
+
+## Llegamos al final ¿cómo?
+
+Por favor, ayúdanos a mejorar las escuelas de verano/otoño al llenar la [encuesta de satisfacción](https://forms.gle/8M8jF59j2Zn9EUK58).
 ## Descripción
 
 El Análisis de Ciclo de Vida es una metodología holística que se ha convertido en la herramienta de facto para el estudio de sostenibilidad en productos y servicios. Debido a esto el avance de esta metodología ha permitido que ahora sea considerada como parte fundamental del diseño de políticas públicas alrededor del mundo. Los estudios de ACV pueden escalar en complejidad, sobre todo por la necesidad de sistematizar la construcción de Inventarios de Ciclo de Vida (LCI), o de integrar el ACV con otras metodologías científicas. Afortunadamente, en los últimos años, el desarrollo de herramientas computacionales de código abierto ha permitido la aparición de un ecosistema de librerías que buscan expandir los límites del ACV convencional. Este es el caso de Brightway: una de las librerías de código abierto en lenguaje Python más utilizadas para realizar cálculos de ACV de manera programática. 
