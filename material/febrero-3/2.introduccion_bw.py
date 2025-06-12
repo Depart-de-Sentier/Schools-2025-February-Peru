@@ -16,13 +16,13 @@
 # %% [markdown]
 # # Introduccion a brightway - pt. 1
 #
-# En esta seccion hablaremos de los conceptos fundamentales de brigthway. Es importante aclarar que toda esta informacion esta disponible en linea en la pagina de documentacion: 
+# En esta seccion hablaremos de los conceptos fundamentales de brigthway. Es importante aclarar que toda esta informacion esta disponible en linea en la pagina de documentacion:
 #
 # https://docs.brightway.dev/en/latest/index.html
 
 # %% [markdown]
 # ## Configura tu proyecto brightway
-# Debido al gran tamano de las bases de datos utilizadas en ACV, brightway require grabar cierta informacion en disco. 
+# Debido al gran tamano de las bases de datos utilizadas en ACV, brightway require grabar cierta informacion en disco.
 # Por esta razon, cada vez que se crea un proyecto nuevo es necesario configurarlo.
 #
 # El primer paso consiste en importar las dependencias necesarias:
@@ -40,6 +40,12 @@ print('bw2data version: ',bd.__version__)
 print('bw2io version: ',bi.__version__)
 print('bw2calc version: ',bc.__version__)
 
+
+# %% [markdown]
+# Este tutorial ha sido generado con las siguientes versiones:
+# bw2data version:  (4, 4, 4)
+# bw2io version:  0.9.9
+# bw2calc version:  2.0.2
 # %%
 bd.projects
 
@@ -83,7 +89,7 @@ bd.projects
 # En caso desees eliminar un proyecto, puedes utilizar la funcion `bw2data.projects.delete_dir`
 
 # %%
-# El argumento `delete_dir` es booleano e indica 
+# El argumento `delete_dir` es booleano e indica
 # si tambien se desea eliminar la carpeta que contiene los datos del proyecto.
 bd.projects.delete_project(name='nuevo_proyecto', delete_dir=True)
 
@@ -101,31 +107,40 @@ bd.projects.delete_project(name='nuevo_proyecto', delete_dir=True)
 # %% [markdown]
 # ## Creando una nueva biosfera
 # Brightway esta fuertemente (pero no estrictamente) ligado a los modelos y esquemas utilizados por ecoinvent.
-# Por esto, los metodos de impacto y flujos ambientales (biosfera) son aquellos proporcionados por ecoinvent a traves de su servicio ecoquery. 
+# Por esto, los metodos de impacto y flujos ambientales (biosfera) son aquellos proporcionados por ecoinvent a traves de su servicio ecoquery.
 # Aunque los metodos son desarrollados por grupos de investigacion independientes, ecoinvent los centraliza y modifica a fin de que sean compatibles y listos para conectarse con su base de datos.
 
 # %% [markdown]
-# Lo primero que haremos sera crear una biosfera (a la ecoinvent) y los multiples metodos de impacto disponibles por defecto.
-# Para esto, el paquete `bw2io` cuenta con una funcion llama `bw2setup`, asi:
+# <div class="alert alert-block alert-danger">
+# Versiones anteriores de este notebook sugerian el uso de bw2io.bw2setup().
+# Este metodo ha sido eliminado (deprecated) y la manera standard de instalar una biosfera es la que se indica en las siguientes celdas.
+# </div>
+
+# %% [markdown]
+# La forma mas actual de crear una biosfera es mediante el paquete bw2io.
+# Para ello utilizaremos el modulo bw2io.remote:
 
 # %%
-bi.bw2setup()
+bi.remote.get_projects() # Este metodo buscara distintas versiones de biosfera listas para ser utilizadas.
 
 # %% [markdown]
-# El mensaje de la celda de arriba nos dice que `bw2io` ha creado una base de datos llamada 'biosphere3' que contiene 4709 nodos (flujos ambientales).
-# Adicionalmente, 762 metodos de impacto nuevos han sido creados.
+# Elije la base de datos mas conveniente para tu proyecto. Recuerda que distintas versiones de ecoinvent son compatibles con version especificas de biosfera.
+# Recuerda que `ecoinvent-3.8-biosphere` es compatible con versiones de ecoinvent menores a 3.8.
 #
-
+# En este ejemplo instalaremos la version 3.10 (que es compatible con versiones mayores a 3.10).
+# Utilizaremos el metodo bw2io.remote.install_projects, que toma como argumentos el nombre de la version de biosfera desea, el nombre del proyecto, y el argumento `overwrite_existing=True`, que indica que bw2io puede sobre escribir en caso que el proyecto ya exista.
+# %%
+bi.remote.install_projects('ecoinvent-3.10-biosphere','nuevo_proyecto', overwrite_existing=True)
 # %% [markdown]
 # <div class="alert alert-block alert-info">
-# Diferentes grupos de investigacion actualizan constanmente distintos metodos de impacto. Por ello, cada version de `bw2io` puede presentar nuevos metodos de impacto. Puedes ver la version de bw2io asi: `bw2io.__version__`
+# Diferentes grupos de investigacion actualizan constanmente distintos metodos de impacto. Por ello, cada version de biosfera puede presentar nuevos metodos de impacto.
 # </div>
 
 # %% [markdown]
 # La biosfera esta ahora almacenada en una base de datos. En la jerga de brightway, una base de datos no es mas que un objeto que permite acceder a los nodos contenidos en este. Podemos ver las bases de datos contenidas en este proyecto de la siguiente manera:
 
 # %%
-# La base de datos 'biosphere3' tiene ese nombre por defecto. 
+# La base de datos 'biosphere3' tiene ese nombre por defecto.
 bd.databases
 
 # %% [markdown]
@@ -143,16 +158,16 @@ biosfera.random()
 
 
 # %% [markdown]
-# De manera similar, podemos explorar los diferentes metodos que fueron instalados previamente. En brightway, los metodos presentados como una combinacion de tres elementos: 
+# De manera similar, podemos explorar los diferentes metodos que fueron instalados previamente. En brightway, los metodos presentados como una combinacion de tres elementos:
 # > (<'Nombre del metodo'>, <'Categoria de impacto'>, <'Indicador'>)
 
 # %%
-bd.methods 
+bd.methods
 # Hay que 'convertir' bw2data.methods en una lista para poder ver todos los metodos disponibles
-# list(bd.methods) 
+# list(bd.methods)
 
 # %% [markdown]
-# Buscar un metodo en una lista tan extensa puede ser muy problematico. 
+# Buscar un metodo en una lista tan extensa puede ser muy problematico.
 # Para facilitar la busqueda de una metodo en especifico, podemos utilizar el poder de python.
 
 # %%
@@ -209,7 +224,7 @@ if 'new_biosphere' in bd.databases:
 # %% [markdown]
 # ## Manipular Actividades
 # Una de las funcionalidades de brightway mas importantes es la creacion de actividades (o nodos, en general).
-# Se puede crear una actividad utilizando la funcion `new_activity`, perteneciente a los objetos de base de datos. En este caso, se puede indicar cualquier cantidad de argumentos pero incluyendo SIEMPRE los argumentos `code`, `name`, `unit` y `location`. Estos cuatro argumentos son obligatorios porque es lo minimo requerido para tener actividades unicas. 
+# Se puede crear una actividad utilizando la funcion `new_activity`, perteneciente a los objetos de base de datos. En este caso, se puede indicar cualquier cantidad de argumentos pero incluyendo SIEMPRE los argumentos `code`, `name`, `unit` y `location`. Estos cuatro argumentos son obligatorios porque es lo minimo requerido para tener actividades unicas.
 #
 
 # %%
@@ -273,17 +288,17 @@ cf = db.new_activity(**data)
 cf.save()
 
 ng = db.new_activity(
-    name="Nat Gas", 
-    code='ng', 
-    location='NO', 
+    name="Nat Gas",
+    code='ng',
+    location='NO',
     unit='MJ'
 )
 
 ng.save()
 
 co2 = bd.Database('biosphere3').new_activity(
-    name="Carbon Dioxide", 
-    code='co2', 
+    name="Carbon Dioxide",
+    code='co2',
     categories=('air',),
     type='emission',
 )
@@ -310,19 +325,19 @@ print(list(db))
 # %%
 
 bike.new_exchange(
-    amount=2.5, 
+    amount=2.5,
     type='technosphere',
     input=cf
 ).save()
 
 cf.new_exchange(
-    amount=237.3, 
+    amount=237.3,
     type='technosphere',
     input=ng,
 ).save()
 
 ng.new_exchange(
-    amount=26.6 / 237, 
+    amount=26.6 / 237,
     type='biosphere',
     input=co2,
 ).save()
@@ -342,14 +357,14 @@ ipcc.write([
 # %%
 lca = bc.LCA({bike:1},method=('IPCC',)) # Instancia la clase
 lca.lci() # calcula el inventario de ciclo de vida
-lca.lcia() # Calcula los impactos 
+lca.lcia() # Calcula los impactos
 print("El impacto es: ", lca.score)
 
 # %% [markdown]
 # 🚧 **Manos a la obra**:
 # - Se ha descubierto que la produccion de fibra de carbono emite 0.23 kg de monoxido dinitrogeno al aire $N_{2}O$ por cada kilogramo de fibra de carbono producido.
 # - El factor de caracterizacion del $N_{2}O$ es 276.9
-# - En cuanto ha aumentado el impacto ?  
+# - En cuanto ha aumentado el impacto ?
 
 
 # %%
