@@ -140,14 +140,14 @@ bi.remote.install_projects('ecoinvent-3.10-biosphere','nuevo_proyecto', overwrit
 # La biosfera esta ahora almacenada en una base de datos. En la jerga de brightway, una base de datos no es mas que un objeto que permite acceder a los nodos contenidos en este. Podemos ver las bases de datos contenidas en este proyecto de la siguiente manera:
 
 # %%
-# La base de datos 'biosphere3' tiene ese nombre por defecto.
+# La base de datos 'ecoinvent-3.10-biosphere' tiene ese nombre por defecto.
 bd.databases
 
 # %% [markdown]
 # Podemos manipular la biosfera asignando la base de datos a una nueva variable `biosfera` de la siguiente forma:
 
 # %%
-biosfera = bd.Database('biosphere3')
+biosfera = bd.Database('ecoinvent-3.10-biosphere')
 
 # %% [markdown]
 # Por ahora no exploraremos a detalle esta base de datos. Si embargo utilizaremos la funcion `random` que nos permite muestrear un nodo aleatorio para ver de que trata el contenido.
@@ -188,7 +188,7 @@ for nombre, categoria, indicator in bd.methods:
 
 # %% [markdown]
 # ## Manipular bases de datos
-# En la seccion anterior, dejamos que `bw2io.bw2setup` cree una base de datos nueva llamada 'biosphere3'. Una base de datos contiene nodos, ya sean de la biosfera o de la tecnosfera. En otros software, los nodos de la biosfera suelen ser llamados Elementary Flow y los de la tecnosfera, Activities. En brightway, se utiliza el concepto general de 'nodo' a cualquier elemento que este contenido en una base de datos. Este puede ser un flujo elemental o un actividad de la tecnosfera.
+# En la seccion anterior, dejamos que `bw2io.bw2setup` cree una base de datos nueva llamada 'ecoinvent-3.10-biosphere'. Una base de datos contiene nodos, ya sean de la biosfera o de la tecnosfera. En otros software, los nodos de la biosfera suelen ser llamados Elementary Flow y los de la tecnosfera, Activities. En brightway, se utiliza el concepto general de 'nodo' a cualquier elemento que este contenido en una base de datos. Este puede ser un flujo elemental o un actividad de la tecnosfera.
 #
 # En este sentido, una nueva base de datos puede ser creada de la siguiente manera:
 #
@@ -211,7 +211,7 @@ bd.databases
 # En muchas situaciones, puede que sea necesario realizar una copia de una base de datos. Esto puede realizarse de la siguiente forma:
 
 # %%
-new_database = bd.Database('biosphere3').copy('new_biosphere')
+new_database = bd.Database('ecoinvent-3.10-biosphere').copy('new_biosphere')
 
 # %% [markdown]
 # Para borrar una base de datos, solo hay que imaginar que `bd.databases` tiene las mismas propiedades que un diccionario de python y utilizar `del`
@@ -296,7 +296,7 @@ ng = db.new_activity(
 
 ng.save()
 
-co2 = bd.Database('biosphere3').new_activity(
+co2 = bd.Database('ecoinvent-3.10-biosphere').new_activity(
     name="Carbon Dioxide",
     code='co2',
     categories=('air',),

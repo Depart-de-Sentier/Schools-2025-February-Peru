@@ -16,15 +16,15 @@
 # %% [markdown]
 # # Introduccion a brightway - pt. 2
 #
-# En esta seccion hablaremos de los conceptos fundamentales de brigthway. Es importante aclarar que toda esta informacion esta disponible en linea en la pagina de documentacion: 
+# En esta seccion hablaremos de los conceptos fundamentales de brigthway. Es importante aclarar que toda esta informacion esta disponible en linea en la pagina de documentacion:
 #
 # https://docs.brightway.dev/en/latest/index.html
 
 # %% [markdown]
 # ## Exportar bases de datos y proyectos
-# En la seccion anterior aprendimos a crear bases de datos de manera automatica ('biosphere3') y de manera manual ('mi_base_de_datos'). 
+# En la seccion anterior aprendimos a crear bases de datos de manera automatica ('ecoinvent-3.10-biosphere') y de manera manual ('mi_base_de_datos').
 # En situaciones convencionales, es normal que necesitemos compartir nuestros modelos de inventario, ya sea durante el trabajo colaborativo o para reportar nuestro trabajo a revisores, colegas y cualquier por razones de transparencia.
-# Para esto, bw2io ofrece una serie de herramientas que pueden usarse para exportar los modelos en diferentes formatos. 
+# Para esto, bw2io ofrece una serie de herramientas que pueden usarse para exportar los modelos en diferentes formatos.
 # Por un tema de popularidad, en esta seccion nos enfocaremos en 3 herramientas:
 # - Exportar una base de datos a excel
 # - Exportar una base de datos a csv (dataframe)
@@ -50,7 +50,7 @@ bd.projects.set_current('nuevo_proyecto_2')
  # bi.export.excel.write_lci_excel??
 
 # %%
-# dirpath es el argumento que controla en que ubicacion se exportara el archivo. 
+# dirpath es el argumento que controla en que ubicacion se exportara el archivo.
 # En sistemas operativos tipo UNIX (Linux, MacOS), '.' significa 'aqui'.
 directorio = bi.export.excel.write_lci_excel(database_name='mi_base_de_datos',dirpath='.')
 
@@ -88,12 +88,12 @@ bi.backup_project_directory('nuevo_proyecto_2',dir_backup='.')
 importador = bi.ExcelImporter('lci-mi_base_de_datos.xlsx')
 importador.apply_strategies()
 importador.match_database(fields=('name', 'code', 'unit', 'location'))  # Conecta nodos del archivo excel
-importador.match_database('biosphere3', fields=('name','unit','categories')) # Conecta nodos con la base de datos biosphere3
+importador.match_database('ecoinvent-3.10-biosphere', fields=('name','unit','categories')) # Conecta nodos con la base de datos ecoinvent-3.10-biosphere
 importador.statistics()
 importador.write_excel()
 
 # %%
-importador.match_database('biosphere3', fields=('name','unit','categories')) # Conecta nodos con la base de datos biosphere3
+importador.match_database('ecoinvent-3.10-biosphere', fields=('name','unit','categories')) # Conecta nodos con la base de datos ecoinvent-3.10-biosphere
 importador.statistics()
 
 # %%
@@ -113,12 +113,12 @@ bicicleta = db.get('bici') # seleccionamos la actividad que tiene codigo 'bici',
 # %%
 lca = bc.LCA({bicicleta:1},method=('IPCC',)) # Instancia la clase
 lca.lci() # calcula el inventario de ciclo de vida
-lca.lcia() # Calcula los impactos 
+lca.lcia() # Calcula los impactos
 print("El impacto es: ", lca.score) # Es el mismo 🎉
 
 # %% [markdown]
 # ### Importar el backup del proyecto
-# Este modalidad no require mucha explicacion: El proyecto se carga nuevamente. 
+# Este modalidad no require mucha explicacion: El proyecto se carga nuevamente.
 
 # %%
 bi.restore_project_directory(
@@ -138,15 +138,15 @@ bi.restore_project_directory(
 
 # %% [markdown]
 # ## Importar bases de datos comerciales
-# Hemos aprendido a construir un modelo de ACV desde cero y de forma manual. Aunque esto resulta bastante util, en la realidad solemos combinar nuestros datos con aquellos provenientes de bases de datos comerciales. En esta seccion nos enfocaremos en la base de datos ecoinvent (v3.9), que es una de las mas utilizadas en el sector. 
+# Hemos aprendido a construir un modelo de ACV desde cero y de forma manual. Aunque esto resulta bastante util, en la realidad solemos combinar nuestros datos con aquellos provenientes de bases de datos comerciales. En esta seccion nos enfocaremos en la base de datos ecoinvent (v3.9), que es una de las mas utilizadas en el sector.
 #
 # En la actualidad hay dos maneras de importar los datos de ecoinvent en nuestro proyecto:
 # - Leyendo los archivos ecospold2 crudos directamente del disco y convirtiendolos en una base de datos de brigthway.
 # - Utilizando la herramienta `import_ecoinvent_release` que descarga la base de datos desde un servidor remoto.
-#   
+#
 # ### Importando ecoinvent (crudo) desde el disco
 #
-# Para este caso, es necesario haber descargado ecoinvent. Ecoinvent es distribuido en formato comprimido 7z, y contiene todas las actividades en formato ecospold2 (algo similar a XML). `bw2io` tiene funciones disenadas para interpretar la informacion, verificar que los `exchanges` sean correctos, y que los nodos de la biosfera existan en la base de datos 'biosphere3'.
+# Para este caso, es necesario haber descargado ecoinvent. Ecoinvent es distribuido en formato comprimido 7z, y contiene todas las actividades en formato ecospold2 (algo similar a XML). `bw2io` tiene funciones disenadas para interpretar la informacion, verificar que los `exchanges` sean correctos, y que los nodos de la biosfera existan en la base de datos 'ecoinvent-3.10-biosphere'.
 #
 
 # %%
@@ -163,12 +163,12 @@ db = bi.SingleOutputEcospold2Importer(dirpath='/media/ei391/datasets',db_name='e
 db.apply_strategies()
 
 # %%
-# 3. Ecoinvent esta listo en la memoria pero aun no ha sido grabado en el disco. 
+# 3. Ecoinvent esta listo en la memoria pero aun no ha sido grabado en el disco.
 # Hay que grabarlo en el disco.
 db.write_database()
 
 # %% [markdown]
-# Para verificar que ha sido importado correctamente, podemos repetir el ejercicio realizado con la base de datos 'biosphere3' de la anterior seccion.bd.databases
+# Para verificar que ha sido importado correctamente, podemos repetir el ejercicio realizado con la base de datos 'ecoinvent-3.10-biosphere' de la anterior seccion.bd.databases
 
 # %%
 bd.databases # Lista de las bases de datos
@@ -179,12 +179,12 @@ len(ei) # Muestra la cantidad de elementos
 
 # %% [markdown]
 # ### Importando ecoinvent desde un servidor remoto
-# Para este caso utilizamos la funcion `bw2io.import_ecoinvent_release` que se encarga de 1) instalar una biosfera, 2) instalar los metodos de impacto mas actuales, y 3) instalar la base de datos ecoinvent. 
+# Para este caso utilizamos la funcion `bw2io.import_ecoinvent_release` que se encarga de 1) instalar una biosfera, 2) instalar los metodos de impacto mas actuales, y 3) instalar la base de datos ecoinvent.
 # Como podran imaginar, requiere la autenticacion del usuario que debe poseer un cuenta de acceso ecoinvent
 
 # %%
 # bw2io.import_ecoinvent_release(
-#     version="3.9" 
+#     version="3.9"
 #     system_model="cutoff", # Otras opciones son: "consequential", "apos" y "EN15804"
 #     username="xxxx", # Tu usuario
 #     password="xxxx", # Tu clave
@@ -197,7 +197,7 @@ seleccionado = ei.random() # Explora las actividades
 print(seleccionado.as_dict())
 
 # %% [markdown]
-# Como pueden notar, el contenido de la actividad ecoinvent es bastante rica. Existen campos fuera de `name`, `code`,`location` y `unit` que son nuevos para nosotros, lo que demuestra que brightway es lo suficientemente flexible al definir una actividad. 
+# Como pueden notar, el contenido de la actividad ecoinvent es bastante rica. Existen campos fuera de `name`, `code`,`location` y `unit` que son nuevos para nosotros, lo que demuestra que brightway es lo suficientemente flexible al definir una actividad.
 #
 # Lo que vimos en la celda anterior describe a una actividad, pero aun no describe sus conexiones (`exchanges`). Para acceder a ellas, hay que utilizar las funciones `exchanges`, `technosphere` o `biosphere`, segun lo que se desee observar.
 
