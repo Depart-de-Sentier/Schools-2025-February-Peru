@@ -43,9 +43,10 @@ print('bw2calc version: ',bc.__version__)
 
 # %% [markdown]
 # Este tutorial ha sido generado con las siguientes versiones:
-# bw2data version:  (4, 4, 4)
-# bw2io version:  0.9.9
-# bw2calc version:  2.0.2
+#
+#   - bw2data version:  4.0.dev17
+#   - bw2io version:  0.9.dev17
+#   - bw2calc version:  2.0.2
 # %%
 bd.projects
 
