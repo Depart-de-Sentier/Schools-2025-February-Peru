@@ -130,7 +130,7 @@ bi.remote.get_projects() # Este metodo buscara distintas versiones de biosfera l
 # En este ejemplo instalaremos la version 3.10 (que es compatible con versiones mayores a 3.10).
 # Utilizaremos el metodo bw2io.remote.install_projects, que toma como argumentos el nombre de la version de biosfera desea, el nombre del proyecto, y el argumento `overwrite_existing=True`, que indica que bw2io puede sobre escribir en caso que el proyecto ya exista.
 # %%
-bi.remote.install_projects('ecoinvent-3.10-biosphere','nuevo_proyecto', overwrite_existing=True)
+bi.remote.install_project('ecoinvent-3.10-biosphere','nuevo_proyecto', overwrite_existing=True)
 # %% [markdown]
 # <div class="alert alert-block alert-info">
 # Diferentes grupos de investigacion actualizan constanmente distintos metodos de impacto. Por ello, cada version de biosfera puede presentar nuevos metodos de impacto.
